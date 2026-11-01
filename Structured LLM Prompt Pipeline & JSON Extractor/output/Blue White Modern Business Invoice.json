@@ -1,0 +1,60 @@
+{
+  "inv_num": "12345",
+  "inv_date": "2027-08-17",
+  "due_date": null,
+  "currency": "USD",
+  "seller": {
+    "name": "Studio Shodwe Creative Agency",
+    "address": null,
+    "phone": null,
+    "email": null
+  },
+  "bill_to": {
+    "name": "Ketut Susilo",
+    "address": "123 Anywhere St., Any City",
+    "phone": "123-456-7890",
+    "email": "hello@reallygreatsite.com"
+  },
+  "line_items": [
+    {
+      "description": "ID CARD",
+      "quantity": 100.0,
+      "unit_price": 1.0,
+      "amount": 100.0
+    },
+    {
+      "description": "LETTERHEAD",
+      "quantity": 100.0,
+      "unit_price": 1.0,
+      "amount": 100.0
+    },
+    {
+      "description": "POSTER",
+      "quantity": 100.0,
+      "unit_price": 5.0,
+      "amount": 500.0
+    },
+    {
+      "description": "FLYER",
+      "quantity": 100.0,
+      "unit_price": 5.0,
+      "amount": 500.0
+    },
+    {
+      "description": "OUTDOOR BANNER",
+      "quantity": 100.0,
+      "unit_price": 10.0,
+      "amount": 1000.0
+    }
+  ],
+  "subtotal": 2200.0,
+  "tax_rate_percent": 10.0,
+  "tax_amount": 220.0,
+  "total": 2420.0,
+  "payment_info": {
+    "bank_name": "Wardiere",
+    "account_name": "Claudia Alves",
+    "account_number": "0123 4567 8901"
+  },
+  "notes": "Please send payment within 30 days of receiving this invoice. There will be 10% interest charge per month on late invoice."
+}

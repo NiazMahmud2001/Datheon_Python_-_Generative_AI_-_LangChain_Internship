@@ -1,0 +1,37 @@
+{
+  "inv_num": "01234",
+  "inv_date": "2030-01-01",
+  "due_date": null,
+  "currency": "USD",
+  "seller": null,
+  "bill_to": {
+    "name": "Sacha Dubois",
+    "address": "123 Anywhere St., Any City, ST 12345",
+    "phone": null,
+    "email": null
+  },
+  "line_items": [
+    {
+      "description": "Item 1",
+      "quantity": 1.0,
+      "unit_price": 200.0,
+      "amount": 200.0
+    },
+    {
+      "description": "Item 2",
+      "quantity": 2.0,
+      "unit_price": 50.0,
+      "amount": 100.0
+    }
+  ],
+  "subtotal": 300.0,
+  "tax_rate_percent": null,
+  "tax_amount": 0.0,
+  "total": 300.0,
+  "payment_info": {
+    "bank_name": "Rimberio",
+    "account_name": "Claudia",
+    "account_number": "0123 4567 8901"
+  },
+  "notes": null
+}

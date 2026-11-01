@@ -1,0 +1,49 @@
+{
+  "inv_num": "01234",
+  "inv_date": "2034-05-15",
+  "due_date": "2034-06-15",
+  "currency": "USD",
+  "seller": null,
+  "bill_to": {
+    "name": "Phyllis Schwaiger",
+    "address": "123 Anywhere St., Any City, ST 12345",
+    "phone": "+123-456-7890",
+    "email": null
+  },
+  "line_items": [
+    {
+      "description": "Content Plan",
+      "quantity": 5.0,
+      "unit_price": 50.0,
+      "amount": 250.0
+    },
+    {
+      "description": "Copy Writing",
+      "quantity": 2.0,
+      "unit_price": 50.0,
+      "amount": 100.0
+    },
+    {
+      "description": "Website Design",
+      "quantity": 5.0,
+      "unit_price": 50.0,
+      "amount": 250.0
+    },
+    {
+      "description": "Website Development",
+      "quantity": 5.0,
+      "unit_price": 100.0,
+      "amount": 500.0
+    }
+  ],
+  "subtotal": 1100.0,
+  "tax_rate_percent": 30.0,
+  "tax_amount": 330.0,
+  "total": 1430.0,
+  "payment_info": {
+    "bank_name": "Really Great Bank",
+    "account_name": "Studio Salford",
+    "account_number": "0123 4567 8901"
+  },
+  "notes": null
+}

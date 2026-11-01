@@ -1,0 +1,62 @@
+{
+  "inv_num": "0",
+  "inv_date": "2022-04-03",
+  "due_date": "2023-04-21",
+  "currency": "USD",
+  "seller": {
+    "name": "Hanover And Tyke",
+    "address": "123 Anywhere St., Any City, ST 12345",
+    "phone": "+123-456-7890",
+    "email": null
+  },
+  "bill_to": {
+    "name": "Chad Gibbons",
+    "address": null,
+    "phone": null,
+    "email": null
+  },
+  "line_items": [
+    {
+      "description": "Wood Log",
+      "quantity": 20.0,
+      "unit_price": 20.0,
+      "amount": 400.0
+    },
+    {
+      "description": "Cement",
+      "quantity": 40.0,
+      "unit_price": 15.0,
+      "amount": 600.0
+    },
+    {
+      "description": "Steel Pipe",
+      "quantity": 10.0,
+      "unit_price": 8.0,
+      "amount": 80.0
+    },
+    {
+      "description": "Pvc Pipe",
+      "quantity": 10.0,
+      "unit_price": 8.0,
+      "amount": 80.0
+    },
+    {
+      "description": "Steel Bar",
+      "quantity": 10.0,
+      "unit_price": 8.0,
+      "amount": 80.0
+    },
+    {
+      "description": "Wood Board",
+      "quantity": 20.0,
+      "unit_price": 20.0,
+      "amount": 400.0
+    }
+  ],
+  "subtotal": 1640.0,
+  "tax_rate_percent": null,
+  "tax_amount": 100.0,
+  "total": 1740.0,
+  "payment_info": null,
+  "notes": null
+}
