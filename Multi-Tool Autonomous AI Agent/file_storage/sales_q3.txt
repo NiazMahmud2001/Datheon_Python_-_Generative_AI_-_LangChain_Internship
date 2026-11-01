@@ -1,0 +1,11 @@
+Quarterly Sales Report - Q3 (sample data for the read_file tool)
+
+Region        Units Sold    Price per Unit (USD)
+North         1250          18.50
+South         980           21.00
+East          1430          17.25
+West          760           24.80
+
+Notes:
+- The marketing budget for Q3 was 12,000 USD.
+- Target for Q4: grow total revenue by 15% compared to Q3.

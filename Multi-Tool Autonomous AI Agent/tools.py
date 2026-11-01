@@ -27,8 +27,9 @@ tool_search_int = TavilySearch(
 @tool
 def read_file(file_name: str) -> str:
     """Read a local text file from the files folder. Pass only the file name, e.g. 'notes.txt'."""
-    folder_path = os.path.dirname(os.path.abspath(__file__))
-    file_path = os.path.join(folder_path , file_name)
+    # only file_storage/ is readable, so .env and the source code stay private
+    folder_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "file_storage")
+    file_path = os.path.abspath(os.path.join(folder_path , file_name))
 
     if not os.path.normcase(file_path).startswith(os.path.normcase(folder_path) + os.sep):   # "../../secret" ঠেকাও
         return "Error: access outside the files folder is not allowed"

@@ -50,7 +50,7 @@ This is a ReAct-style loop built with **LangGraph**:
 |---|---|---|
 | `tavily_search` | Real-time web search (Tavily, up to 15 results) | Needs a Tavily API key |
 | `calculator` | Evaluates math such as `(25 * 4) / 3 + 2**5` | Uses an **AST-based evaluator**, not `eval()`. Only numbers and `+ - * / ** %` are allowed, so the LLM cannot run arbitrary Python |
-| `read_file` | Reads a local text file by name | Path traversal (`../`) is blocked, and only files inside the project folder can be read |
+| `read_file` | Reads a local text file from `file_storage/` by name | Sandboxed to `file_storage/`: path traversal (`../`) is blocked, so `.env` and the source code cannot be read |
 
 ## Key features
 
@@ -67,7 +67,8 @@ This is a ReAct-style loop built with **LangGraph**:
 ├── main.py             # Gradio chat UI (one memory thread per session)
 ├── main_for_graph.py   # LLM setup, AgentState, LangGraph agent, run_agent()
 ├── tools.py            # Tavily search, safe calculator, sandboxed file reader
-├── file_storage/       # Local files for the agent to read
+├── file_storage/       # The only folder read_file can access (sample: sales_q3.txt)
+├── .env.example        # Template for .env
 └── .env                # API keys and settings (not committed)
 ```
 
@@ -95,10 +96,16 @@ python main.py
 
 Open the local URL that Gradio prints (by default http://127.0.0.1:7860) and start chatting.
 
+To test the agent from the terminal without the UI (runs one sample question):
+
+```bash
+python main_for_graph.py
+```
+
 ### Example questions
 
 - *"What is the current population of Bangladesh? Divide it by 64 districts."* (search → calculator)
-- *"Read notes.txt and summarise it."* (file reader)
+- *"Read sales_q3.txt and calculate the total Q3 revenue."* (file reader → calculator)
 - *"What is 15% of the current price of gold per ounce?"* (search → calculator)
 
 ## Tech stack

@@ -132,10 +132,13 @@ def run_agent(question: str, thread_id: str = "cli"):# cli for gradio UI
     }
     steps = []
 
-    for update in agent_graph_with_mem.stream({"messages": [("user", question)]}, cfg, stream_mode="updates"):
+    # tool_calls_count is saved by the checkpointer too, so reset it for every new question
+    new_input = {"messages": [HumanMessage(question)], "tool_calls_count": 0}
+
+    for update in agent_graph_with_mem.stream(new_input, cfg, stream_mode="updates"):
         # for building responsize ui : I will return node wise response in Gradio UI ... so steam with updates
          for node_output in update.values():
-            for msg in node_output["messages"]:
+            for msg in (node_output or {}).get("messages", []):
 
                 if isinstance(msg, AIMessage) and msg.tool_calls:
                     if msg.content:
@@ -153,7 +156,8 @@ def run_agent(question: str, thread_id: str = "cli"):# cli for gradio UI
 
 
 
-print(run_agent("What is the current population of UAE? Divide it by Each Emirates."))
+if __name__ == "__main__":  # CLI test only, does not run when main.py imports this file
+    print(run_agent("What is the current population of UAE? Divide it by Each Emirates."))
 
 
 
